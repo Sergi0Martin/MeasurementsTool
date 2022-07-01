@@ -9,7 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{436DFEEE-5
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F99A259F-2DBF-4FB1-8802-5DD1B42E1797}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeasurementsTool.UnitTests", "UnitTest\MeasurementsTool.UnitTests.csproj", "{CCB84530-BA5B-41BF-B63A-E025B41377F3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MeasurementsTool.UnitTests", "UnitTest\MeasurementsTool.UnitTests.csproj", "{CCB84530-BA5B-41BF-B63A-E025B41377F3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

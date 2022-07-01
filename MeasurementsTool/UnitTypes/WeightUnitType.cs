@@ -1,4 +1,4 @@
-﻿namespace MeasurementsTool
+﻿namespace MeasurementsTool.UnitTypes
 {
     public enum WeightUnitType
     {
