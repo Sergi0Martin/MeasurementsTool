@@ -15,9 +15,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - name: Current tag
-      run: |
-        echo ${{github.ref_name}}
     - name: Setup .NET
       uses: actions/setup-dotnet@v2
       with:
