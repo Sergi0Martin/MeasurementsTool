@@ -14,11 +14,10 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v3
     - name: Current tag
       run: |
         echo ${{github.ref_name}}
-        echo ${GITHUB_REF#refs/*/}
-    - uses: actions/checkout@v3
     - name: Setup .NET
       uses: actions/setup-dotnet@v2
       with:
@@ -29,7 +28,7 @@ jobs:
       run: dotnet build --configuration Release --no-restore
     - name: Package
       run: dotnet pack -c Release -o . MeasurementsTool.sln
-    # - name: Console Command List files
+    # - name: Console Command list files
     #   run: |
     #     ls -R
     - uses: actions/upload-artifact@v2
