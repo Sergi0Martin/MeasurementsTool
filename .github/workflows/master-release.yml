@@ -58,8 +58,6 @@ jobs:
       run: dotnet nuget add source --username Sergi0Martin --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name MeasurementsTool "https://nuget.pkg.github.com/Sergi0Martin/index.json" 
     - name: Publish on GitHub Packages
       run: dotnet nuget push MeasurementsTool/bin/Release/*.nupkg --api-key ${{ secrets.PUBLISHING_PACKAGES_PAT }} --source "MeasurementsTool"
-    - name: Delete Package Versions
-      uses: actions/delete-package-versions@v2.0.1
 
 
   publish-github-release:
