@@ -17,6 +17,7 @@ jobs:
     - name: Current tag
       run: |
         echo ${{github.ref_name}}
+        echo ${GITHUB_REF#refs/*/}
     - uses: actions/checkout@v3
     - name: Setup .NET
       uses: actions/setup-dotnet@v2
@@ -28,9 +29,9 @@ jobs:
       run: dotnet build --configuration Release --no-restore
     - name: Package
       run: dotnet pack -c Release -o . MeasurementsTool.sln
-    - name: Console Command List files
-      run: |
-        ls -R
+    # - name: Console Command List files
+    #   run: |
+    #     ls -R
     - uses: actions/upload-artifact@v2
       with:
         name: solution-build
@@ -67,6 +68,7 @@ jobs:
 
   publish-github-release:
     name: Publish GitHub release
+    if: ${{ false }}  # step disabled with false
     runs-on: ubuntu-latest
     needs: [build, run-tests]
     steps:
