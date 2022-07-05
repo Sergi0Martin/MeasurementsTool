@@ -29,7 +29,7 @@ jobs:
       run: dotnet build --configuration Release --no-restore
 
     - name: Test
-      run: dotnet test --no-build --verbosity diagnostic --collect:"XPlat Code Coverage" --results-directory:CoverageResults/
+      run: dotnet test --no-build --verbosity normal --collect:"XPlat Code Coverage" -r:CoverageResults/
     - name: Console Command list files
       run: |
         ls -R
