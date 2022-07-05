@@ -27,6 +27,22 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build --configuration Release --no-restore
+
+    - name: Test
+      run: dotnet test --no-build --verbosity normal --collect:"XPlat Code Coverage" --results-directory:CoverageResults/
+    - name: Console Command list files
+      run: |
+        ls -R
+        echo MOVER COVERAGE RESULTS
+        cp CoverageResults/*/*.xml CoverageResults/
+    - name: Codecov
+      uses: codecov/codecov-action@v3.1.0
+      with:
+        name: codecov-umbrella
+        files: CoverageResults/coverage.cobertura.xml
+        flags: unittests
+        verbose: true
+    
     - uses: actions/upload-artifact@v2
       with:
         name: solution-build
