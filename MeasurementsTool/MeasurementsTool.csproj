@@ -4,7 +4,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
     <PackageTags>measurement;conversion;length,weight</PackageTags>
     <Description>Measurement units with extension conversion methods</Description>
     <Authors>Sergio Martin</Authors>
