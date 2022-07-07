@@ -37,18 +37,27 @@ jobs:
     runs-on: ubuntu-latest
     needs: [build]
     steps:
-    - uses: actions/download-artifact@v2
-      with:
-        name: solution-build
-        path: .
+    # - uses: actions/download-artifact@v2
+    #   with:
+    #     name: solution-build
+    #     path: .
+    # - name: Setup .NET
+    #   uses: actions/setup-dotnet@v2
+    #   with:
+    #     dotnet-version: 6.0.x
+    # - name: Restore dependencies
+    #   run: dotnet restore
+    - uses: actions/checkout@v3
     - name: Setup .NET
       uses: actions/setup-dotnet@v2
       with:
         dotnet-version: 6.0.x
     - name: Restore dependencies
       run: dotnet restore
+    - name: Build
+      run: dotnet build --configuration Release --no-restore  
     - name: Test
-      run: dotnet test --no-build --verbosity normal --collect:"XPlat Code Coverage" --results-directory:./CoverageResults/
+      run: dotnet test --no-build  --logger "console;verbosity=detailed" --collect:"XPlat Code Coverage" --results-directory:./CoverageResults/
     - name: Console Command list files
       run: |
         ls -R
