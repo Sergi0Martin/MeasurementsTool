@@ -37,39 +37,26 @@ jobs:
     runs-on: ubuntu-latest
     needs: [build]
     steps:
-    - uses: actions/download-artifact@v2
-      with:
-        name: solution-build
-        path: .
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v2
-      with:
-        dotnet-version: 6.0.x
+    # - uses: actions/download-artifact@v2
+    #   with:
+    #     name: solution-build
+    #     path: .
+    - uses: actions/checkout@v3
+    # - name: Setup .NET
+    #   uses: actions/setup-dotnet@v2
+    #   with:
+    #     dotnet-version: 6.0.x
     - name: Test
-      run: dotnet test --no-build --collect:"XPlat Code Coverage" --results-directory:./CoverageResults/ MeasurementsTool.sln
+      run: dotnet test --collect:"XPlat Code Coverage" --results-directory:./CoverageResults/ MeasurementsTool.sln
     - name: Console Command list files
       run: |
-        ls -R
+        # ls -R
         echo MOVER COVERAGE RESULTS
         cp CoverageResults/*/*.xml CoverageResults/
     - name: Codecov
       uses: codecov/codecov-action@v3.1.0
       with:
-        name: codecov-umbrella
+        name: Code coverage report
         files: CoverageResults/coverage.cobertura.xml
         flags: unittests
-        verbose: true
-
-  # publish-code-coverage:
-  #   name: Publish coverage on Codecov
-  #   runs-on: ubuntu-latest
-  #   needs: [build, run-tests]
-  #   steps:
-  #   - uses: actions/download-artifact@v2
-  #     with:
-  #       name: solution-build
-  #       path: .
-  #   - name: Add GitHub package source  
-  #     run: dotnet nuget add source --username Sergi0Martin --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name MeasurementsTool "https://nuget.pkg.github.com/Sergi0Martin/index.json" 
-  #   - name: Publish on GitHub Packages
-  #     run: dotnet nuget push MeasurementsTool/bin/Release/*.nupkg --api-key ${{ secrets.PUBLISHING_PACKAGES_PAT }} --source "MeasurementsTool"
+        verbose: false
