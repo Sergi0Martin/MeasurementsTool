@@ -2,7 +2,7 @@
 
 [![Production Deploy](https://github.com/Sergi0Martin/MeasurementsTool/actions/workflows/master-release.yml/badge.svg?branch=master)](https://github.com/Sergi0Martin/MeasurementsTool/actions/workflows/master-release.yml)
 
-[![codecov](https://codecov.io/gh/Sergi0Martin/MeasurementsTool/branch/codecoverage/graph/badge.svg?token=QA8HAR6NME)](https://codecov.io/gh/Sergi0Martin/MeasurementsTool)
+[![codecov](https://codecov.io/gh/Sergi0Martin/MeasurementsTool/branch/dev/graph/badge.svg?token=QA8HAR6NME)](https://codecov.io/gh/Sergi0Martin/MeasurementsTool)
 
 [![dev-pipeline](https://github.com/Sergi0Martin/MeasurementsTool/actions/workflows/dev-pipeline.yml/badge.svg)](https://github.com/Sergi0Martin/MeasurementsTool/actions/workflows/dev-pipeline.yml)
 
