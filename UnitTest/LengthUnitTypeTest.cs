@@ -6,7 +6,7 @@ namespace UnitTest
         public void Setup() { }
 
         [Theory]
-        [TestCase(LengthUnitType.M, LengthUnitType.MM, 51.5, 50500)]
+        [TestCase(LengthUnitType.M, LengthUnitType.MM, 50.5, 50500)]
         [TestCase(LengthUnitType.MM, LengthUnitType.DM, 50.5, 0.505)]
         [TestCase(LengthUnitType.KM, LengthUnitType.M, 50.5, 50500)]
         public void ConvertTo_International_System_Works(LengthUnitType from, LengthUnitType to, double value, double expectedResult)
