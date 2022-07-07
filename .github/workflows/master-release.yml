@@ -43,7 +43,7 @@ jobs:
         name: solution-build
         path: .
     - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet test --no-build MeasurementsTool.sln
 
   publish-github-package:
     name: Publish GitHub package

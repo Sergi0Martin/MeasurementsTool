@@ -27,9 +27,6 @@ jobs:
       run: dotnet restore MeasurementsTool.sln
     - name: Build
       run: dotnet build --configuration Release --no-restore MeasurementsTool.sln
-    - name: Console Command list files
-      run: |
-        ls -R
     - uses: actions/upload-artifact@v2
       with:
         name: solution-build
@@ -49,7 +46,7 @@ jobs:
       with:
         dotnet-version: 6.0.x
     - name: Test
-      run: dotnet test --collect:"XPlat Code Coverage" --results-directory:./CoverageResults/ MeasurementsTool.sln
+      run: dotnet test --no-build --collect:"XPlat Code Coverage" --results-directory:./CoverageResults/ MeasurementsTool.sln
     - name: Console Command list files
       run: |
         ls -R
