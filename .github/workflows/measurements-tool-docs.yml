@@ -25,11 +25,11 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Install, build, and upload your site
       uses: withastro/action@v1
       with:
-        path: ./docs # The root location of your Astro project inside the repository. (optional)
+        path: ./docs
           # node-version: 18 # The specific version of Node that should be used to build your site. Defaults to 18. (optional)
           # package-manager: pnpm@latest # The Node package manager that should be used to install dependencies and build your site. Automatically detected based on your lockfile. (optional)
 

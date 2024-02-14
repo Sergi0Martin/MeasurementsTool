@@ -8,7 +8,7 @@
     <PackageTags>measurement;conversion;length,weight</PackageTags>
     <Description>Measurement units with extension conversion methods</Description>
     <Authors>Sergio Martin</Authors>
-    <Version>1.0.14</Version>
+    <Version>1.0.15</Version>
     <RepositoryUrl>https://github.com/Sergi0Martin/MeasurementsTool</RepositoryUrl>
     <Title>MeasurementsTool</Title>
     <PackageProjectUrl>https://sergi0martin.github.io/MeasurementsTool</PackageProjectUrl>
