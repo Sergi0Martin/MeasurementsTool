@@ -1,13 +1,16 @@
-name: Release
+name: measurements-tool-nuget-package
 
 # https://docs.github.com/es/actions/deployment/about-deployments/deploying-with-github-actions#using-concurrency
 concurrency: 
-  group: production-concurrency
+  group: production
   cancel-in-progress: false
 
 on:
   push:
     branches: [ "master" ]
+
+# Allows you to run this workflow manually from the Actions tab on GitHub.
+  workflow_dispatch:
 
 jobs:
   build:
@@ -31,7 +34,7 @@ jobs:
     - uses: actions/upload-artifact@v2
       with:
         name: solution-build
-        path: .
+        path: MeasurementsTool.*.nupkg
 
   tests:
     name: Run tests
@@ -39,8 +42,21 @@ jobs:
     needs: [build]
     steps:
     - uses: actions/checkout@v3
+    # - name: Test
+    #   run: dotnet test MeasurementsTool.sln
     - name: Test
-      run: dotnet test MeasurementsTool.sln
+      run: dotnet test --collect:"XPlat Code Coverage" --results-directory:./CoverageResults/ MeasurementsTool.sln
+    - name: Move coverage result files
+      run: |
+        echo MOVER COVERAGE RESULTS
+        cp CoverageResults/*/*.xml CoverageResults/
+    - name: Codecov
+      uses: codecov/codecov-action@v3.1.0
+      with:
+        name: Code coverage report
+        files: CoverageResults/coverage.cobertura.xml
+        flags: unittests
+        verbose: false
 
   publish-github-package:
     name: Publish GitHub package

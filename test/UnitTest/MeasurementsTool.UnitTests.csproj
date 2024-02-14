@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MeasurementsTool\MeasurementsTool.csproj" />
+    <ProjectReference Include="..\..\src\MeasurementsTool\MeasurementsTool.csproj" />
   </ItemGroup>
 
 </Project>

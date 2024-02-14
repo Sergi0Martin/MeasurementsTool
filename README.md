@@ -8,7 +8,7 @@
 
 **MeasurementsTool** are simple C# Enum types with cool extension methods for measurement conversions.
 ### Features
-##### Available conversion types:
+#### Available conversion types:
 - LengthUnit:
     > **International System**:
             KM, HM, DAM, M, DM, CM, MM
@@ -25,6 +25,12 @@
 ```csharp
 WeightUnitType.<fromWeightUnit>.ConvertTo(<desiredWeightUnit>, <weightValue>)
 LengthUnitType.<fromLengthUnit>.ConvertTo(<desiredLengthUnit>, <lengthValue>)
+```
+
+#### :
+```csharp
+WeightUnitType.KG.ConvertTo(WeightUnitType.G, 50.5);
+LengthUnitType.KM.ConvertTo(LengthUnitType.M, 50.5);
 ```
 
 [Github](https://github.com/Sergi0Martin/MeasurementsTool)

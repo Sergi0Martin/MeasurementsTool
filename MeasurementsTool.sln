@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MeasurementsTool", "MeasurementsTool\MeasurementsTool.csproj", "{9D43810A-CD39-4352-BFA5-C03DAD9B3D12}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MeasurementsTool", "src\MeasurementsTool\MeasurementsTool.csproj", "{9D43810A-CD39-4352-BFA5-C03DAD9B3D12}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{436DFEEE-5C93-4E1E-B225-A228793ABFF4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F99A259F-2DBF-4FB1-8802-5DD1B42E1797}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MeasurementsTool.UnitTests", "UnitTest\MeasurementsTool.UnitTests.csproj", "{CCB84530-BA5B-41BF-B63A-E025B41377F3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MeasurementsTool.UnitTests", "test\UnitTest\MeasurementsTool.UnitTests.csproj", "{CCB84530-BA5B-41BF-B63A-E025B41377F3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
