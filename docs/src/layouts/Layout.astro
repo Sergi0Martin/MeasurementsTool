@@ -1,4 +1,6 @@
 ---
+import "@fontsource-variable/maven-pro";
+
 interface Props {
 	title: string;
 }
@@ -20,3 +22,11 @@ const { title } = Astro.props;
 		<slot />
 	</body>
 </html>
+
+<style is:global>
+	body {
+		font-family: 'Maven Pro Variable', sans-serif;
+		background-color: #161019;
+		color: white;
+	}
+</style>
