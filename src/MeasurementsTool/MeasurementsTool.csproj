@@ -1,23 +1,33 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
     <PackageTags>measurement;conversion;length,weight</PackageTags>
     <Description>Measurement units with extension conversion methods</Description>
     <Authors>Sergio Martin</Authors>
-    <Version>1.0.15</Version>
+    <Version>1.1.0</Version>
     <RepositoryUrl>https://github.com/Sergi0Martin/MeasurementsTool</RepositoryUrl>
     <Title>MeasurementsTool</Title>
     <PackageProjectUrl>https://sergi0martin.github.io/MeasurementsTool</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryType>git</RepositoryType>
+    <PackageIcon>measurementstool-ico-128x128.png</PackageIcon>
+    <ApplicationIcon>measurementstool.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="measurementstool.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="..\..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="C:\Users\serji\Pictures\measurementstool-ico-128x128.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
