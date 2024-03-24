@@ -1,0 +1,34 @@
+---
+import Release from "./Release.astro";
+---
+
+<h1 class="dark:text-maize text-xl font-bold">Latest Releases</h1>
+<div class="flex flex-row justify-center text-center">
+    <Release version="1.23" />
+</div>
+
+<script>
+    function addElement() {
+        const newRelease = document.createElement("Release");
+        const containerDiv = document.getElementById("div");
+        document.body.insertBefore(newRelease, containerDiv);
+    }
+
+    async function getNugetInfo() {
+        const response = await fetch(
+            "https://azuresearch-ussc.nuget.org/query?q=MeasurementsTool&prerelease=false&semVerLevel=2.0.0",
+        );
+        const nugetInfo = await response.json();
+        // console.log(nugetInfo.data[0]);
+        const totalDownloads = nugetInfo.data[0].totalDownloads;
+        const versions = nugetInfo.data[0].versions;
+        const last3Versions = versions.slice(Math.max(versions.length - 3, 1));
+        console.log(last3Versions);
+        console.log(totalDownloads);
+    }
+
+    window.onload = async () => {
+        await getNugetInfo();
+        addElement();
+    };
+</script>
