@@ -26,6 +26,7 @@ const { title } = Astro.props;
 <style is:global>
 	body {
 		font-family: 'Maven Pro Variable', sans-serif;
-		@apply bg-oxford_blue-300
+		/* @apply bg-oxford_blue-300; */
+		background-image: linear-gradient(to bottom right, theme('colors.oxford_blue.200'), theme('colors.oxford_blue.500'));
 	}
 </style>

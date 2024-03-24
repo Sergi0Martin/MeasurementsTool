@@ -3,13 +3,19 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header/Header.astro'
 import Footer from '../components/Footer/footer.astro'
 import WelcomeCard from '../components/Index/WelcomeCard.astro'
+import GetStarted from '../components/GetStarted/GetStarted.astro'
 ---
 
 <Layout title="Measurements Tool">
-	<main>
+	<main class="mx-3 md:mx-10 lg:mx-48">
 		<Header/>
 		<WelcomeCard/>
-		<h1 class="flex justify-center m-72 text-maize">WORK IN PROGRESS</h1>
+		<GetStarted/>
+		<h1 class="flex justify-center font-bold mb-52 mt-52 text-maize">WORK IN PROGRESS</h1>
+
+		<!-- <h1 class="flex justify-center m-72 mt-96 text-maize">WORK IN PROGRESS</h1>
+
+		<h1 class="flex justify-center m-72 mt-96 text-maize">WORK IN PROGRESS</h1> -->
 		<Footer/>
 	</main>
 </Layout>

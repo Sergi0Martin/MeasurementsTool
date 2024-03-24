@@ -1,16 +1,13 @@
 ---
 var darkMode = true;
 ---
-
-<nav
-    class="py-3 px-4 bg-maize flex flex-row items-center align-middle justify-between"
->
-    <h1 class="text-munsell-500 font-medium">MeasurementsTool</h1>
+<nav class=" py-3 px-4 flex flex-row items-center align-middle justify-between">
+    <h1 class="text-munsell dark:text-maize-900 font-medium">MeasurementsTool</h1>
     <button theme-button>
         {
             darkMode ? (
                 <svg
-                    class="w-6 h-6 text-munsell-500 dark:text-white"
+                    class="w-6 h-6 text-maize-900"
                     aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -26,7 +23,7 @@ var darkMode = true;
                 </svg>
             ) : (
                 <svg
-                    class="w-6 h-6 text-munsell dark:text-white"
+                    class="w-6 h-6 text-munsell"
                     aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -44,3 +41,17 @@ var darkMode = true;
         }
     </button>
 </nav>
+<hr>
+
+
+<style>
+    hr{
+        border-top: 1px solid #bbb;
+        color: bg-oxford_blue-900;
+    }
+    nav {
+        /* background-image: url(/MeasurementsTool/tape2.jpg);
+        background-repeat: no-repeat;      
+        height: 39px; */
+    }
+</style>
