@@ -7,7 +7,10 @@ concurrency:
 
 on:
   push:
-    branches: [ "master" ]
+    paths:
+      - '!docs/**'
+    branches: 
+      - 'master'
 
 # Allows you to run this workflow manually from the Actions tab on GitHub.
   workflow_dispatch:
