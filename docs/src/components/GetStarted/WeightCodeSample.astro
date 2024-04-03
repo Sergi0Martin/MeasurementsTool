@@ -1,46 +1,64 @@
 ---
 
 ---
-<div class="mb-32">
-    <div class="expressive-code">
-        <pre>
-            <code>
-                <div class="code">
-                    <div class="code-line">
-                        <span style="color:#8B909D">// Sample of Kilograms to Ounces conversion:</span>
-                    </div>
-                </div>
-                <div class="code">
-                    <div class="code-line">
-                        <!-- ejemplo => WeightUnitType.KG.ConvertTo(WeightUnitType.OZ, 9000.50); -->
-                        <span style="color:#489dd9">var </span>
-                        <span style="color:#89dcfe">convertedValue </span>
-                        <span style="color:#EEF0F9">= </span>
-                        <span style="color:#b6d798">WeightUnitType</span>
-                        <span style="color:#EEF0F9">.</span>
-                        <span style="color:#ffe74c">KG</span>
-                        <span style="color:#EEF0F9">.</span>
-                        <span style="color:#EEF0F9">ConvertTo</span>
-                        <span style="color:#EEF0F9">(</span>
-                        <span style="color:#b6d798">WeightUnitType</span>
-                        <span style="color:#EEF0F9">.</span>
-                        <span style="color:#ffe74c">OZ</span>
-                        <span style="color:#EEF0F9">,</span>
-                        <span style="color:#b5be78">9000</span>
-                        <span style="color:#EEF0F9">.</span>
-                        <span style="color:#b5be78">50</span>
-                        <span style="color:#EEF0F9">)</span>
-                        <span style="color:#EEF0F9">;</span>
-                    </div>
-                </div>
-            </code>
-        </pre>
-    </div>
+<div class="mb-32 flex flex-col justify-center items-center">
+    <pre class="flex flex-col justify-center text-center max-w-fit">
+        <code class="max-w-fits">
+            <div class="code-line">
+                <span style="color:#8B909D">// Sample of Kilograms to Ounces conversion:</span>
+            </div>
+            <div class="code-line">
+                <span style="color:#489dd9">var </span>
+                <span style="color:#89dcfe">convertedValue </span>
+                <span style="color:#EEF0F9">= </span>
+                <span style="color:#b6d798">WeightUnitType</span>
+                <span style="color:#EEF0F9">.</span>
+                <span style="color:#ffe74c">KG</span>
+                <span style="color:#EEF0F9">.</span>
+                <span style="color:#EEF0F9">ConvertTo</span>
+                <span style="color:#EEF0F9">(</span>
+                <span style="color:#b6d798">WeightUnitType</span>
+                <span style="color:#EEF0F9">.</span>
+                <span style="color:#ffe74c">OZ</span>
+                <span style="color:#EEF0F9">,</span>
+                <span style="color:#b5be78">9000</span>
+                <span style="color:#EEF0F9">.</span>
+                <span style="color:#b5be78">50</span>
+                <span style="color:#EEF0F9">)</span>
+                <span style="color:#EEF0F9">;</span>
+            </div>
+            <div class="code-line">
+                <span> </span>
+            </div>
+            <div class="code-line">
+                <span style="color:#8B909D">// Sample of Feet to Millimeters conversion:</span>
+            </div>
+            <div class="code-line">
+                <span style="color:#489dd9">var </span>
+                <span style="color:#89dcfe">convertedValue </span>
+                <span style="color:#EEF0F9">= </span>
+                <span style="color:#b6d798">LengthUnitType</span>
+                <span style="color:#EEF0F9">.</span>
+                <span style="color:#ffe74c">FT</span>
+                <span style="color:#EEF0F9">.</span>
+                <span style="color:#EEF0F9">ConvertTo</span>
+                <span style="color:#EEF0F9">(</span>
+                <span style="color:#b6d798">LengthUnitType</span>
+                <span style="color:#EEF0F9">.</span>
+                <span style="color:#ffe74c">MM</span>
+                <span style="color:#EEF0F9">,</span>
+                <span style="color:#b5be78">9000</span>
+                <span style="color:#EEF0F9">.</span>
+                <span style="color:#b5be78">50</span>
+                <span style="color:#EEF0F9">)</span>
+                <span style="color:#EEF0F9">;</span>
+            </div>
+        </code>
+    </pre>
 </div>
 
-<style>
-    
-    .expressive-code {
+<style>    
+    code {
         margin-top: 1.5rem;
         margin-bottom: 1.5rem;
         border-radius: 0.375rem;
@@ -48,21 +66,17 @@
         border-color: rgb(84 88 100);
         box-shadow: 10px 10px 60px #ffe74c;
         background-color: rgb(11 14 24);
-    }
-
-    .code {
-        /* all: unset;
-        display: block; */
-        /* flex: 1 0 100%;
-        padding: var(--ec-codePadBlk) 0;
-        color: var(--ec-codeFg);  */
         font-weight: 500;
-        line-height: 10px;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
     }
 
     .code-line {
         display: flex;
         flex-direction: row; 
+        flex-wrap: wrap;
+        overflow-x: hidden;
     }
 
 </style>
