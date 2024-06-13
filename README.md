@@ -7,18 +7,28 @@
 **MeasurementsTool** are simple C# Enum types with cool extension methods for measurement conversions.
 ### Features
 #### Available conversion types:
-- LengthUnit:
+- Length:
     > **International System**:
             KM, HM, DAM, M, DM, CM, MM
+            
     >  **Non International System**:
             YD, FT, IN
 
-
-- WeightUnit:
+- Weight:
     > **International System**:
             T, Q, KG, HG, DAG, G, DG, CG, MG, MCG
+
     > **Non International System**:
             LongTon, ShortTon, LB, OZ
+
+- Capacity:
+    > **International System**: 
+            YL, ZL, EL, PL, TL, GL, ML, kL, hL, daL, L, dL, cL, mL, uL, nL, pL, fL, aL, zL, yL
+
+- Temperature:
+    > **International System**:
+            Celsius, Fahrenheit, Kelvin
+
 ### Usage
 ```csharp
 WeightUnitType.<fromWeightUnit>.ConvertTo(<desiredWeightUnit>, <weightValue>)

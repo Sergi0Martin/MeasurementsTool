@@ -5,12 +5,6 @@ public class WeightUnitTypeTest
     [SetUp]
     public void Setup() { }
 
-    [Test]
-    public void Test1()
-    {
-        Assert.Pass();
-    }
-
     [Theory]
     [TestCase(WeightUnitType.KG, WeightUnitType.G, 50.5, 50500)]
     [TestCase(WeightUnitType.G, WeightUnitType.T, 50.5, 0.0000505)]
