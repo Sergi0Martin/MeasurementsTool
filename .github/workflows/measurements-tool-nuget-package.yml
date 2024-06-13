@@ -73,7 +73,7 @@ jobs:
     - name: Add GitHub package source  
       run: dotnet nuget add source --username Sergi0Martin --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name MeasurementsTool "https://nuget.pkg.github.com/Sergi0Martin/index.json" 
     - name: Publish on GitHub Packages
-      run: dotnet nuget push MeasurementsTool.*.nupkg --api-key ${{ secrets.PUBLISHING_PACKAGES_PAT }} --source "MeasurementsTool"
+      run: dotnet nuget push MeasurementsTool.*.nupkg --api-key ${{ secrets.GITHUB_TOKEN }} --source "MeasurementsTool"
 
 
   publish-github-release:
